@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "404231972023",
+    "project_id": "showve-d6967",
+    "storage_bucket": "showve-d6967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404231972023:android:b41318e28e6b3bd6e35932",
+        "android_client_info": {
+          "package_name": "com.showve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404231972023-oj6q2pkcdgeia2bst5o5ntlc92fjm2s6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.showve",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "404231972023-16565eb90vv9sp0nr5ak3vultgi4bk5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHIhZaGvmwi-uHyDFIlQOlNhx5W0O5Dt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404231972023-16565eb90vv9sp0nr5ak3vultgi4bk5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

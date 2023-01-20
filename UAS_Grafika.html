@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritma Bresenham</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600" style="border: 1px solid gray;"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+
+        function putpixel(x, y) {
+            context.moveTo(x, y);
+            context.fillRect(x, y, 1, 1);
+        }
+
+        var A = []
+        var B = []
+
+        x0 = 15
+        y0 = 15
+        x1 = 100
+        y1 = 100
+
+    
+        let dx, dy, p, x, y;
+        dx = x1 - x0;
+        dy = y1 - y0;
+        x = x0;
+        y = y0;
+        p = 2 * dy - dx;
+
+
+        if (x0 < x1 && y0 < y1){
+            while (x <= x1) { // x+ , y+
+                if (p >= 0) {
+                    A.push(x);
+                    B.push(y);
+                    y = y + 1;
+                    p = p + 2 * dy - 2 * dx;
+                } else {
+                    A.push(x);
+                    B.push(y);
+                    p = p + 2 * dy;
+                }
+                x = x + 1;
+            }
+        }
+        else if (x0 < x1 && y0 > y1){
+            while (x < x1) { // x+, y-
+                if (p <= 0) {
+                    A.push(x);
+                    B.push(y);
+                    y = y - 1;
+                    p = p + 2 * dy - 2 * dx;
+                } else {
+                    A.push(x);
+                    B.push(y);
+                    p = p + 2 * dy;
+                }
+                x = x + 1;
+            }
+        }
+        else if (x0 > x1 && y0 > y1){
+            while (x > x1) { // x-, y-
+                if (p <= 0) {
+                    A.push(x);
+                    B.push(y);
+                    y = y - 1;
+                    p = p + 2 * dy - 2 * dx;
+                } else {
+                    A.push(x);
+                    B.push(y);
+                    p = p + 2 * dy;
+                }
+                x = x - 1;
+            }
+        }
+        else if(x0 > x1 && y0 < y1){
+            while (x > x1) { // x-, y+
+                if (p >= 0) {
+                    A.push(x);
+                    B.push(y);
+                    y = y + 1;
+                    p = p + 2 * dy - 2 * dx;
+                } else {
+                    A.push(x);
+                    B.push(y);
+                    p = p + 2 * dy;
+                }
+                x = x - 1;
+            }
+        }
+
+        for (let i = 0; i < A.length; ++i) {
+            console.log(A[i],B[i]);
+            context.moveTo(300 + A[i], 300 + B[i]);
+            context.fillRect(300 + A[i], 300 + B[i], 1, 1);
+        }
+    </script>
+</body>
+
+</html>
